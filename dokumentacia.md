@@ -118,8 +118,9 @@ Bez XOR obfuskácie sú citlivé reťazce priamo viditeľné:
 strings windows_antidebug.exe | grep -i "flag\|secret"
 # Výstup: Flag{Real_Secret_B1T_2025}
 ```
-
+Windows:
 ![Strings Before Obfuscation - Windows](screens/windows_without_obf.png)
+Linux
 ![Strings Before Obfuscation - Linux](screens/linux_without_obf.png)
 
 #### Test 2: Strings nástroj - Po obfuskácii
@@ -130,8 +131,9 @@ S XOR obfuskáciou reťazce nie sú viditeľné:
 strings windows_antidebug.exe | grep -i "flag\|secret"
 # Výstup: (žiadny)
 ```
-
+Windows:
 ![Strings After Obfuscation - Windows](screens/windows_obf.png)
+Linux:
 ![Strings After Obfuscation - Linux](screens/linux_obf.png)
 
 ### 3.3 Testovanie anti-debug kontrol
@@ -140,7 +142,9 @@ strings windows_antidebug.exe | grep -i "flag\|secret"
 
 Program bol spustený bez debugovacích nástrojov. Všetky kontroly prešli a program zobrazil skutočný flag.
 
+Windows:
 ![Normal Execution - Windows](screens/windows_regular.png)
+Linux:
 ![Normal Execution - Linux](screens/linux_regular.png)
 
 #### Test 2: Spustenie pod debuggerom (Windows - x64dbg)
